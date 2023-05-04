@@ -1,8 +1,8 @@
 import random
 import time
 from paho.mqtt import client as mqtt_client
-#broker = 'emqx1'
-broker = 'localhost'
+broker = 'snf-36700.ok-kno.grnetcloud.net'
+#broker = 'localhost'
 port = 1883
 topic = "alert/mqtt"
 # generate client ID with pub prefix randomly
@@ -34,7 +34,6 @@ def publish(client):
         status = result[0]
         if status == 0:
             print(f"Send `{msg}` to topic `{topic}`")
-            
         else:
             print(f"Failed to send message to topic {topic}")
         msg_count += 1
