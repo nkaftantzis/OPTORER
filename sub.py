@@ -2,12 +2,13 @@ import random
 from paho.mqtt import client as mqtt_client
 
 
-broker = 'broker.emqx.io'
+broker = 'emqx1'
+#broker = 'localhost'
 port = 1883
-topic = "python/mqtt"
+topic = "alert/mqtt"
 # generate client ID with pub prefix randomly
 client_id = f'python-mqtt-{random.randint(0, 100)}'
-username = 'emqx'
+username = 'admin'
 password = 'public'
 
 
